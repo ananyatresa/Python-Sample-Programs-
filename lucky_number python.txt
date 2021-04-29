@@ -1,0 +1,18 @@
+a, b = [int(i) for i in input().split()]
+def lucky_number(l,r):
+    li1=[]
+    temp=0
+    for i in range(l,r+1):
+        if (has_six_eight(i)== True):
+            temp+=1
+    print (temp)
+    
+def has_six_eight(x):
+    while (x!=0):
+        if (x%10==6 or x%10==8):
+            return True
+        x=x//10
+    return False
+
+if __name__=="__main__":
+    lucky_number(a,b)
